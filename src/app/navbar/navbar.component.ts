@@ -19,6 +19,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['formulario']); 
     if (ruta == 2)
     this.router.navigate(['qr']); 
+    if (ruta == 3)
+    this.router.navigate(['table']); 
     
   }
 

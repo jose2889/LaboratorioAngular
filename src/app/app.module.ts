@@ -9,9 +9,12 @@ import { CodigoqrComponent } from './components/codigoqr/codigoqr.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormulariosComponent } from './components/formularios/formularios.component';
 import { appRouting } from './app.routes';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { MaterialModule } from './material';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TableMaterialComponent } from './components/table-material/table-material.component';
+import { UserService } from './services/user.service'
 
 
 
@@ -21,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     CodigoqrComponent,
     FormulariosComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    TableMaterialComponent
     
   ],
   imports: [
@@ -31,11 +35,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     appRouting, 
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
     
 
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
