@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="flex">
+        <span>Laboratorio Angular</span>
+        <!-- <span class="example-spacer"></span> -->
+        <div>
+            <button mat-button [matMenuTriggerFor]="menu"><mat-icon>view_headline</mat-icon>Menu</button>
+            <mat-menu #menu="matMenu">
+                <button (click)="navegar(1)" mat-menu-item>Formulario</button>
+                <button (click)="navegar(2)" mat-menu-item>Codigo QR</button>
+            </mat-menu>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
