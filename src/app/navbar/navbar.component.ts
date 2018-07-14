@@ -21,6 +21,10 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['qr']); 
     if (ruta == 3)
     this.router.navigate(['table']); 
+    if (ruta == 4)
+    this.router.navigate(['barra']); 
+    if (ruta == 5)
+    this.router.navigate(['htmltoimg']); 
     
   }
 

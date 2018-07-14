@@ -1,0 +1,11 @@
+<!-- Adding a barcode in app.component.html -->
+<h1>
+    Generacion de codigo de barra
+</h1>
+
+<input matInput #message maxlength="20" name="codigobarra" [(ngModel)]="codigobarra" placeholder="Texto o Codigo" required>
+<p>{{codigobarra}}</p>
+
+<ngx-barcode id="barra-code" [bc-value]="codigobarra" [bc-display-value]="true" [bc-height]="20" [bc-width]="1" [bc-element-type]="'img'"></ngx-barcode>
+
+<p>Fuente: <a href="https://yobryon.github.io/ngx-barcode/">https://yobryon.github.io/ngx-barcode/</a> </p>
