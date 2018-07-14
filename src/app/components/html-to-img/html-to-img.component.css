@@ -1,0 +1,12 @@
+.rotate {
+    /* Safari */
+    transform: rotate(-45deg);
+    /* Firefox */
+    transform: rotate(-45deg);
+    /* IE */
+    transform: rotate(-45deg);
+    /* Opera */
+    transform: rotate(-45deg);
+    /* Internet Explorer */
+    filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+}

@@ -6,6 +6,8 @@ import { environment } from './environments/environment';
 // para material angular
 import 'hammerjs';
 
+
+
 if (environment.production) {
   enableProdMode();
 }
