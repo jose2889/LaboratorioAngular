@@ -1,0 +1,12 @@
+<h2>Validacion de Rut Chileno</h2>
+
+
+<input type="text" class="form-control" (change)="Valida_Rut(rut.value)" placeholder="Ingreso Rut" #rut>
+<div *ngIf="!valido && rut.value" class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Aviso!</strong> El rut es invalido
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<button (click)="Valida_Rut(rut.value)" class="btn btn-primary mt-2">Validar</button>

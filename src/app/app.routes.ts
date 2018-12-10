@@ -6,6 +6,7 @@ import { CodigoqrComponent } from './components/codigoqr/codigoqr.component';
 import { TableMaterialComponent } from './components/table-material/table-material.component';
 import { CodidoBarraComponent } from './components/codido-barra/codido-barra.component';
 import { HtmlToImgComponent } from './components/html-to-img/html-to-img.component';
+import { ValidarRutComponent } from './components/validar-rut/validar-rut.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     { path: 'barra', component: CodidoBarraComponent },
     { path: 'qr', component: CodigoqrComponent },
     { path: 'htmltoimg', component: HtmlToImgComponent },
+    { path: 'validar-rut', component: ValidarRutComponent },
     { path: '**', pathMatch:'full', redirectTo: 'home' }
 ];
 

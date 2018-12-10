@@ -20,6 +20,7 @@ import { TableMaterialComponent } from './components/table-material/table-materi
 import { UserService } from './services/user.service';
 import { CodidoBarraComponent } from './components/codido-barra/codido-barra.component';
 import { HtmlToImgComponent } from './components/html-to-img/html-to-img.component';
+import { ValidarRutComponent } from './components/validar-rut/validar-rut.component';
 
 
 
@@ -33,7 +34,8 @@ import { HtmlToImgComponent } from './components/html-to-img/html-to-img.compone
     NavbarComponent,
     TableMaterialComponent,
     CodidoBarraComponent,
-    HtmlToImgComponent
+    HtmlToImgComponent,
+    ValidarRutComponent
     
     
   ],

@@ -5,11 +5,14 @@
         <div>
             <button mat-button [matMenuTriggerFor]="menu"><mat-icon>view_headline</mat-icon>Menu</button>
             <mat-menu #menu="matMenu">
+                    <button routerLink ="/home" mat-menu-item>Inicio</button>
                 <button (click)="navegar(1)" mat-menu-item>Formulario</button>
                 <button (click)="navegar(2)" mat-menu-item>Codigo QR</button>
                 <button (click)="navegar(3)" mat-menu-item>Tabla Material</button>
                 <button (click)="navegar(4)" mat-menu-item>Codigo de Barra</button>
                 <button (click)="navegar(5)" mat-menu-item>Convertir Html a Img</button>
+                <button routerLink ="/validar-rut" mat-menu-item>Validar Rut Chileno</button>
+
 
             </mat-menu>
         </div>
