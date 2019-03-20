@@ -1,8 +1,10 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row class="flex">
         <span>Laboratorio Angular</span>
-        <!-- <span class="example-spacer"></span> -->
+        <button mat-button [routerLink]="['/blog']" ><mat-icon>dashboard</mat-icon>Blog</button>
+        <span class="example-spacer"></span>
         <div>
+           
             <button mat-button [matMenuTriggerFor]="menu"><mat-icon>view_headline</mat-icon>Menu</button>
             <mat-menu #menu="matMenu">
                     <button routerLink ="/home" mat-menu-item>Inicio</button>

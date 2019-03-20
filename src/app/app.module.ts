@@ -21,6 +21,10 @@ import { UserService } from './services/user.service';
 import { CodidoBarraComponent } from './components/codido-barra/codido-barra.component';
 import { HtmlToImgComponent } from './components/html-to-img/html-to-img.component';
 import { ValidarRutComponent } from './components/validar-rut/validar-rut.component';
+import { BlagTabComponent } from './components/blag-tab/blag-tab.component';
+import { ListarComponent } from './components/blag-tab/listar/listar.component';
+import { IngresarComponent } from './components/blag-tab/ingresar/ingresar.component';
+import { EliminarComponent } from './components/blag-tab/eliminar/eliminar.component';
 
 
 
@@ -35,7 +39,11 @@ import { ValidarRutComponent } from './components/validar-rut/validar-rut.compon
     TableMaterialComponent,
     CodidoBarraComponent,
     HtmlToImgComponent,
-    ValidarRutComponent
+    ValidarRutComponent,
+    BlagTabComponent,
+    ListarComponent,
+    IngresarComponent,
+    EliminarComponent
     
     
   ],
