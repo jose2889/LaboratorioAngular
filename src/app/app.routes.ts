@@ -11,9 +11,13 @@ import { BlagTabComponent } from './components/blag-tab/blag-tab.component';
 import { ListarComponent } from './components/blag-tab/listar/listar.component';
 import { IngresarComponent } from './components/blag-tab/ingresar/ingresar.component';
 import { EliminarComponent } from './components/blag-tab/eliminar/eliminar.component';
+import { FotosComponent } from './components/fotos/fotos.component';
+import { CargaComponent } from './components/carga/carga.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
+    { path: 'fotos', component: FotosComponent },
+    { path: 'carga', component: CargaComponent },
     { path: 'blog', component: BlagTabComponent,  children:[
         {path: 'listar', component: ListarComponent},
         {path: 'ingresar', component: IngresarComponent},

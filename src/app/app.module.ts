@@ -25,7 +25,18 @@ import { BlagTabComponent } from './components/blag-tab/blag-tab.component';
 import { ListarComponent } from './components/blag-tab/listar/listar.component';
 import { IngresarComponent } from './components/blag-tab/ingresar/ingresar.component';
 import { EliminarComponent } from './components/blag-tab/eliminar/eliminar.component';
+import { FotosComponent } from './components/fotos/fotos.component';
+import { CargaComponent } from './components/carga/carga.component';
+import { CargaImagenesService } from './services/carga-imagenes.service';
 
+// Firebase
+
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 
 
 
@@ -43,7 +54,10 @@ import { EliminarComponent } from './components/blag-tab/eliminar/eliminar.compo
     BlagTabComponent,
     ListarComponent,
     IngresarComponent,
-    EliminarComponent
+    EliminarComponent,
+    FotosComponent,
+    CargaComponent,
+    NgDropFilesDirective
     
     
   ],
@@ -56,11 +70,14 @@ import { EliminarComponent } from './components/blag-tab/eliminar/eliminar.compo
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule // imports firebase/firestore, only needed for database features
+   
     
 
   ],
-  providers: [UserService],
+  providers: [UserService, CargaImagenesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

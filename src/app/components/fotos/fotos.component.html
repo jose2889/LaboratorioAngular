@@ -1,0 +1,10 @@
+<button mat-raised-button color="warn" class="mt-4" [routerLink]="['/carga']">Cargar Imagenes</button>
+<div class="card-columns main-container">
+  <div class="card" *ngFor="let item of items | async">
+      <img class="card-img-top" [src]="item.url">
+      <div class="card-body">
+          <h5 class="card-title">{{ item.nombre }}</h5>
+      </div>
+  </div>
+
+</div>
