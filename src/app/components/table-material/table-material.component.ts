@@ -13,6 +13,18 @@ import { User } from '../../modelo/user';
 export class TableMaterialComponent implements OnInit {
   dataSource = new UserDataSource(this.userService);
   displayedColumns = ['name', 'email', 'phone', 'company'];
+  unir = 3;
+  data = [
+    {"estado":"Metropolitana", "ciudad":"Caracas", "sector":"Las Mercedes"},
+    {"estado":"Metropolitana", "ciudad":"Caracas", "sector":"Altamira"},
+    {"estado":"Metropolitana", "ciudad":"Miranda", "sector":"Chacao"},
+    {"estado":"Falcon", "ciudad":"Coro", "sector":"San Jose"},
+    {"estado":"Falcon", "ciudad":"Coro", "sector":"Manaure"},
+    {"estado":"Falcon", "ciudad":"Punto Fijo", "sector":"Universitario"},
+    {"estado":"Lara", "ciudad":"Barquisimeto", "sector":"Trinitarias"},
+    {"estado":"Lara", "ciudad":"Barquisimeto", "sector":"Cabudare"},
+  ];
+  
   constructor(private userService: UserService) { }
   
   ngOnInit() {

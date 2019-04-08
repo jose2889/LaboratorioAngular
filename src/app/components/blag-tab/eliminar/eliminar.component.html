@@ -1,1 +1,70 @@
-<img width="300" height="300" src="https://png.pngtree.com/element_origin_min_pic/17/02/12/0cd03bea06d67d03540248beb475eaa1.jpg" alt="">
+<mat-tab-group>
+    <mat-tab label="Bitacora">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-tab>
+    <mat-tab label="Respuesta">
+        <ckeditor [(ngModel)]="ckeditorContent" (change)="mostrar()">
+        </ckeditor>
+    </mat-tab>
+    <mat-tab label="Adjunto">Adjunto</mat-tab>
+    <mat-tab label="Solicitudes Relacionadas">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </mat-tab>
+</mat-tab-group>

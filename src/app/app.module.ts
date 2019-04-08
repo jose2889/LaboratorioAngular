@@ -29,6 +29,7 @@ import { FotosComponent } from './components/fotos/fotos.component';
 import { CargaComponent } from './components/carga/carga.component';
 import { CargaImagenesService } from './services/carga-imagenes.service';
 
+
 // Firebase
 
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -37,8 +38,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
-
-
+import { CKEditorModule } from 'ng2-ckeditor';
+import { MatTabsModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,8 @@ import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
     BrowserModule,
     QRCodeModule,
     NgxBarcodeModule,
+    CKEditorModule,
+    MatTabsModule,
     FormsModule,
     appRouting, 
     ReactiveFormsModule,
