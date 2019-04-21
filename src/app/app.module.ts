@@ -28,12 +28,12 @@ import { EliminarComponent } from './components/blag-tab/eliminar/eliminar.compo
 import { FotosComponent } from './components/fotos/fotos.component';
 import { CargaComponent } from './components/carga/carga.component';
 import { CargaImagenesService } from './services/carga-imagenes.service';
-
-
+import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
+ 
 // Firebase
 
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-
 
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
@@ -74,6 +74,8 @@ import { MatTabsModule } from '@angular/material';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    ToastModule.forRoot(),
+    NgHttpLoaderModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule // imports firebase/firestore, only needed for database features
    

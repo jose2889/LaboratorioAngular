@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import * as html2canvas from "html2canvas";
 
@@ -11,9 +11,12 @@ import * as html2canvas from "html2canvas";
 export class HtmlToImgComponent implements OnInit {
 
   texto:string;
-  constructor() { }
+  constructor(public toastr: ToastsManager, vcr: ViewContainerRef) {
+    this.toastr.setRootViewContainerRef(vcr);
+   }
 
   ngOnInit() {
+    this.toastr.success('You are awesome!', 'Success!');
   }
 
   downloadCanvas(canvasId) {
