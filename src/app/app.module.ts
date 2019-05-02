@@ -30,7 +30,7 @@ import { CargaComponent } from './components/carga/carga.component';
 import { CargaImagenesService } from './services/carga-imagenes.service';
 import { NgHttpLoaderModule } from 'ng-http-loader/ng-http-loader.module';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
- 
+import {NgxMaskModule} from 'ngx-mask'
 // Firebase
 
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -40,6 +40,9 @@ import { AngularFireModule } from 'angularfire2';
 import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { MatTabsModule } from '@angular/material';
+
+import { EditorModule } from '@tinymce/tinymce-angular';
+
 
 @NgModule({
   declarations: [
@@ -68,8 +71,10 @@ import { MatTabsModule } from '@angular/material';
     NgxBarcodeModule,
     CKEditorModule,
     MatTabsModule,
+    EditorModule, 
     FormsModule,
     appRouting, 
+    NgxMaskModule.forRoot(),
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
