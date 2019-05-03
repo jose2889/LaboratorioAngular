@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import { ToastsManager } from 'ng2-toastr';
+import { OrderPipe } from 'ngx-order-pipe';
 
 @Component({
   selector: 'app-blag-tab',
@@ -8,9 +9,16 @@ import { ToastsManager } from 'ng2-toastr';
 })
 export class BlagTabComponent implements OnInit {
   configuracion:any;
-  constructor( private toastr: ToastsManager,
+
+  
+  array: any[] = [{ name: 'John'} , { name: 'Mary' }, { name: 'Adam' }];
+  order: string = 'name';
+
+  constructor( private toastr: ToastsManager, private orderPipe: OrderPipe,
     private vcr: ViewContainerRef) { 
       this.toastr.setRootViewContainerRef(vcr);
+
+      console.log(this.orderPipe.transform(this.array, this.order));
     }
 
   ngOnInit() {

@@ -42,7 +42,7 @@ import { CKEditorModule } from 'ng2-ckeditor';
 import { MatTabsModule } from '@angular/material';
 
 import { EditorModule } from '@tinymce/tinymce-angular';
-
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -70,6 +70,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     QRCodeModule,
     NgxBarcodeModule,
     CKEditorModule,
+    OrderModule,
     MatTabsModule,
     EditorModule, 
     FormsModule,
