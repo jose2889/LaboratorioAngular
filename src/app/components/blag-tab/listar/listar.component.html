@@ -1,1 +1,17 @@
-<img width="300" height="300" src="http://4.bp.blogspot.com/-ZSMZ9pUY38w/VqJoqR8_M5I/AAAAAAAASlE/k9kDOeixbpA/s1600/verification-of-delivery-list-clipboard-symbol_318-61556.png" alt="">
+<p>Convertir Imagen en base 64</p>
+
+<div>
+    <div>
+        <label for="filePicker">Buscar Imagen:</label><br>
+        <input type="file" id="filePicker" (change)="handleFileSelect($event)">
+    </div>
+    <br>
+    <img *ngIf="imagePath" [src]="imagePath" width="300" height="150">
+    <div>
+        <h1>Resultado en Base64</h1>
+        <textarea id="base64textarea" placeholder="Aqui se muestra el string" cols="50" rows="15">{{base64textString}}</textarea>
+    </div>
+</div>
+
+<img *ngIf="imagePath" [src]="imagePath" width="300" height="150">
+<!-- <img width="300" height="300" src="http://4.bp.blogspot.com/-ZSMZ9pUY38w/VqJoqR8_M5I/AAAAAAAASlE/k9kDOeixbpA/s1600/verification-of-delivery-list-clipboard-symbol_318-61556.png" alt=""> -->
