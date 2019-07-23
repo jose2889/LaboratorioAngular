@@ -23,17 +23,20 @@ export class BlagTabComponent implements OnInit {
 
   ngOnInit() {
     this.configuracion = {
-     
+      base_url: '/tinymce', 
+      suffix: '.min',  
       width: 755,
       height: 500,
       resize: false,
+      language: 'es',
+      language_url: 'assets/editor/tinymce-language-es.js',
       autosave_ask_before_unload: false,
       //  mentions_fetch: mentionsFetchFunction,
       powerpaste_allow_local_images: true,
       plugins: [
-        "a11ychecker advcode advlist anchor autolink codesample colorpicker fullscreen help image imagetools tinydrive",
-        " lists link media noneditable powerpaste preview",
-        " searchreplace table template textcolor tinymcespellchecker visualblocks wordcount mentions"
+        " advlist anchor autolink codesample colorpicker fullscreen image imagetools ",
+        " lists link media noneditable preview",
+        " searchreplace table template textcolor visualblocks wordcount "
       ],
       templates: [
         {
@@ -50,8 +53,8 @@ export class BlagTabComponent implements OnInit {
       toolbar:
         "insertfile a11ycheck undo redo | bold italic | forecolor backcolor | template codesample | alignleft aligncenter alignright alignjustify | bullist numlist | link image tinydrive",
       content_css: [
-        "//fonts.googleapis.com/css?family=Lato:300,300i,400,400i",
-        "//www.tiny.cloud/css/content-standard.min.css"
+        // "//fonts.googleapis.com/css?family=Lato:300,300i,400,400i",
+        // "//www.tiny.cloud/css/content-standard.min.css"
       ],
       spellchecker_dialog: true,
       spellchecker_whitelist: ['Ephox', 'Moxiecode'],
