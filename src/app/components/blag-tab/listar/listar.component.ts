@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./listar.component.css']
 })
 export class ListarComponent implements OnInit {
-  private base64textString:String="";
+  public base64textString:String="";
   imagePath:any;
 
   constructor(private _sanitizer: DomSanitizer) { }
