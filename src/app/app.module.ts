@@ -44,6 +44,11 @@ import { MatTabsModule } from '@angular/material';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { OrderModule } from 'ngx-order-pipe';
 
+
+import { AngularSplitModule } from 'angular-split';
+import { TableroComponent } from './components/tablero/tablero.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,9 +66,8 @@ import { OrderModule } from 'ngx-order-pipe';
     EliminarComponent,
     FotosComponent,
     CargaComponent,
-    NgDropFilesDirective
-    
-    
+    NgDropFilesDirective,
+    TableroComponent
   ],
   imports: [
     BrowserModule,
@@ -72,9 +76,10 @@ import { OrderModule } from 'ngx-order-pipe';
     CKEditorModule,
     OrderModule,
     MatTabsModule,
-    EditorModule, 
+    AngularSplitModule.forRoot(),
+    EditorModule,
     FormsModule,
-    appRouting, 
+    appRouting,
     NgxMaskModule.forRoot(),
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -84,8 +89,6 @@ import { OrderModule } from 'ngx-order-pipe';
     NgHttpLoaderModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule // imports firebase/firestore, only needed for database features
-   
-    
 
   ],
   providers: [UserService, CargaImagenesService],

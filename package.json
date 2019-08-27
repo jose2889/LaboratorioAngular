@@ -24,6 +24,7 @@
         "@angular/platform-browser-dynamic": "^5.2.0",
         "@angular/router": "^5.2.0",
         "@tinymce/tinymce-angular": "^3.0.1",
+        "angular-split": "^3.0.2",
         "angular2-qrcode": "^2.0.1",
         "angularfire2": "^5.0.0-rc.4",
         "chilean-formatter": "^1.9.0",
