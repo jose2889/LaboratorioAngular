@@ -11,7 +11,7 @@
             "favicon.ico",
             { "glob": "**/*", "input": "../node_modules/tinymce/skins", "output": "./tinymce/skins/" },
             { "glob": "**/*", "input": "../node_modules/tinymce/themes", "output": "./tinymce/themes/" },
-            { "glob": "**/*", "input": "../node_modules/tinymce/plugins", "output": "./tinymce/plugins/" }     
+            { "glob": "**/*", "input": "../node_modules/tinymce/plugins", "output": "./tinymce/plugins/" }
         ],
         "index": "index.html",
         "main": "main.ts",
@@ -21,11 +21,15 @@
         "testTsconfig": "tsconfig.spec.json",
         "prefix": "app",
         "styles": [
+            "../node_modules/primeng/resources/themes/rhea/theme.css",
+            "../node_modules/primeng/resources/primeng.min.css",
+            "../node_modules/primeicons/primeicons.css",
             "styles.css"
         ],
         "scripts": [
             "../node_modules/html2canvas/dist/html2canvas.min.js",
-            "../node_modules/tinymce/tinymce.min.js"],
+            "../node_modules/tinymce/tinymce.min.js"
+        ],
         "environmentSource": "environments/environment.ts",
         "environments": {
             "dev": "environments/environment.ts",

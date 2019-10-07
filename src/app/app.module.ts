@@ -47,7 +47,10 @@ import { OrderModule } from 'ngx-order-pipe';
 
 import { AngularSplitModule } from 'angular-split';
 import { TableroComponent } from './components/tablero/tablero.component';
-
+import { CrudPrimengComponent } from './components/crud-primeng/crud-primeng.component';
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import {CarouselModule} from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,8 @@ import { TableroComponent } from './components/tablero/tablero.component';
     FotosComponent,
     CargaComponent,
     NgDropFilesDirective,
-    TableroComponent
+    TableroComponent,
+    CrudPrimengComponent
   ],
   imports: [
     BrowserModule,
@@ -87,9 +91,12 @@ import { TableroComponent } from './components/tablero/tablero.component';
     HttpClientModule,
     ToastModule.forRoot(),
     NgHttpLoaderModule,
+    ButtonModule,
+    CardModule,
+    CarouselModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule // imports firebase/firestore, only needed for database features
-
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+   
   ],
   providers: [UserService, CargaImagenesService],
   bootstrap: [AppComponent]
