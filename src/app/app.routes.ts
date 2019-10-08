@@ -29,6 +29,7 @@ const routes: Routes = [
     { path: 'table', component: TableMaterialComponent },
     { path: 'barra', component: CodidoBarraComponent },
     { path: 'qr', component: CodigoqrComponent },
+    { path: 'primeng', component: CrudPrimengComponent },
     { path: 'htmltoimg', component: HtmlToImgComponent },
     { path: 'validar-rut', component: ValidarRutComponent },
     { path: 'crud', component: CrudPrimengComponent },

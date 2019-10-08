@@ -51,6 +51,7 @@ import { CrudPrimengComponent } from './components/crud-primeng/crud-primeng.com
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import {CarouselModule} from 'primeng/carousel';
+import { CarService } from './services/carservice';
 
 @NgModule({
   declarations: [
@@ -95,10 +96,10 @@ import {CarouselModule} from 'primeng/carousel';
     CardModule,
     CarouselModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-   
+    AngularFirestoreModule // imports firebase/firestore, only needed for database features
+
   ],
-  providers: [UserService, CargaImagenesService],
+  providers: [UserService, CarService, CargaImagenesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

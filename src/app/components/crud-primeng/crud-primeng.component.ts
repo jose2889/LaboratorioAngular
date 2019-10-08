@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Car } from '../../modelo/car';
+import { CarService } from '../../services/carservice';
 
 @Component({
   selector: 'app-crud-primeng',
@@ -7,27 +9,70 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudPrimengComponent implements OnInit {
 
+  displayDialog: boolean;
+
+  car: Car = {};
+
+  selectedCar: Car;
+
+  newCar: boolean;
+
   cars: Car[];
 
-  constructor(private messageService: MessageService) {
-      this.cars = [
-          {vin: 'r3278r2', year: 2010, brand: 'Audi', color: 'Black'},
-          {vin: 'jhto2g2', year: 2015, brand: 'BMW', color: 'White'},
-          {vin: 'h453w54', year: 2012, brand: 'Honda', color: 'Blue'},
-          {vin: 'g43gwwg', year: 1998, brand: 'Renault', color: 'White'},
-          {vin: 'gf45wg5', year: 2011, brand: 'VW', color: 'Red'},
-          {vin: 'bhv5y5w', year: 2015, brand: 'Jaguar', color: 'Blue'},
-          {vin: 'ybw5fsd', year: 2012, brand: 'Ford', color: 'Yellow'},
-          {vin: '45665e5', year: 2011, brand: 'Mercedes', color: 'Brown'},
-          {vin: 'he6sb5v', year: 2015, brand: 'Ford', color: 'Black'}
+  cols: any[];
+
+  constructor(private carService: CarService) { }
+
+  ngOnInit() {
+      this.carService.getCarsSmall().then(cars => this.cars = cars);
+
+      this.cols = [
+          { field: 'vin', header: 'Vin' },
+          { field: 'year', header: 'Year' },
+          { field: 'brand', header: 'Brand' },
+          { field: 'color', header: 'Color' }
       ];
   }
 
-  selectCar(car: Car) {
-      this.messageService.add({severity: 'info', summary: 'Car Selected', detail: 'Vin:' + car.vin});
+  showDialogToAdd() {
+      this.newCar = true;
+      this.car = {};
+      this.displayDialog = true;
   }
 
-  ngOnInit() {
+  save() {
+      let cars = [...this.cars];
+      if (this.newCar) {
+        cars.push(this.car);
+      }
+      else {
+        cars[this.cars.indexOf(this.selectedCar)] = this.car;
+      }; 
+
+      this.cars = cars;
+      this.car = null;
+      this.displayDialog = false;
+  }
+
+  delete() {
+      let index = this.cars.indexOf(this.selectedCar);
+      this.cars = this.cars.filter((val, i) => i != index);
+      this.car = null;
+      this.displayDialog = false;
+  }
+
+  onRowSelect(event) {
+      this.newCar = false;
+      this.car = this.cloneCar(event.data);
+      this.displayDialog = true;
+  }
+
+  cloneCar(c: Car): Car {
+      let car = {};
+      for (let prop in c) {
+          car[prop] = c[prop];
+      }
+      return car;
   }
 
 }
