@@ -13,7 +13,6 @@ import { IngresarComponent } from './components/blag-tab/ingresar/ingresar.compo
 import { EliminarComponent } from './components/blag-tab/eliminar/eliminar.component';
 import { FotosComponent } from './components/fotos/fotos.component';
 import { CargaComponent } from './components/carga/carga.component';
-import { CrudPrimengComponent } from './components/crud-primeng/crud-primeng.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -31,7 +30,6 @@ const routes: Routes = [
     { path: 'qr', component: CodigoqrComponent },
     { path: 'htmltoimg', component: HtmlToImgComponent },
     { path: 'validar-rut', component: ValidarRutComponent },
-    { path: 'crud', component: CrudPrimengComponent },
     { path: '**', pathMatch:'full', redirectTo: 'home' }
 ];
 
