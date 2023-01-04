@@ -31,7 +31,7 @@
     "angular-split": "^3.0.2",
     "angular2-qrcode": "^2.0.1",
     "angularfire2": "^5.0.0-rc.4",
-    "chilean-formatter": "^1.9.0",
+    "chilean-formatter": "^2.0.1",
     "core-js": "^2.4.1",
     "express": "4.17.1",
     "firebase": "^4.8.0",
@@ -49,7 +49,7 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
-    "@angular/cli": "~1.7.3",
+    "@angular/cli": "~15.0.4",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@types/jasmine": "~2.8.3",
